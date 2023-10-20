@@ -1,0 +1,25 @@
+{
+  "name": "vite-template",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "npm run font && vite",
+    "build": "npm run font && vite build",
+    "preview": "vite preview",
+    "font": "fonticon-generator  -s ./src/assets/svg -c ./src/assets/font -d ./src/assets/font"
+  },
+  "dependencies": {
+    "agate-icon": "^1.0.0",
+    "agate-ui": "^1.0.0",
+    "axios": "^1.4.0",
+    "fonticon-generator": "^1.0.3",
+    "jy-element-plus": "^0.0.1",
+    "pinia": "^2.1.6",
+    "sass": "^1.64.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  }
+}
