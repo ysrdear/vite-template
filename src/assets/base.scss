@@ -1,1 +1,26 @@
 @import "./font/iconFont.css";
+
+
+.container{
+  padding-top: 50px;
+  .main{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pagination{
+    margin: 10px 20px;
+    justify-content: flex-end;
+  }
+
+}
+
+.el-loading-parent--relative{
+  position: static !important;
+}

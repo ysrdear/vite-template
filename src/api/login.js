@@ -1,4 +1,4 @@
-import { BASE_PRE } from "@/utils/base";
+import { BASE_PRE } from "@/utils/base.js";
 
 const login = {};
 

@@ -1,17 +1,17 @@
 import axios from "axios";
-import { BASE_URL } from "@/utils/base";
-import { ElMessage } from "element-plus";
-import { validateRes, getResData,isFile } from "@/utils/util";
-import { ElLoading } from "element-plus";
-import router from "@/router";
+import { BASE_URL } from "./base";
+import { ElMessage } from "jy-element-plus";
+import { validateRes, getResData,isFile } from "./util";
+import { ElLoading } from "jy-element-plus";
+import router from "../router/index.js";
 
 
 axios.defaults.baseURL = BASE_URL;
 
+// axios.defaults.baseURL = "/api";
+
 axios.defaults.timeout = 10000;
 
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded;charset=UTF-8";
 
 const axiosInstance = axios.create({
   method: "post",
@@ -66,6 +66,8 @@ axiosInstance.interceptors.response.use(
 );
 
 export default function ({ url, method, ...config }, data) {
+  method = method || "post";
+
   let sendKey = {
     post: "data",
     get: "params",
